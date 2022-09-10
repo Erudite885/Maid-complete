@@ -1,0 +1,93 @@
+
+
+.list-container {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    /* background-color: red; */
+}
+
+.checkInput {
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(247, 220, 220);
+    border: 1px solid rgb(185, 180, 180);
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.not-checked-item {
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(247, 220, 220);
+    border: 1px solid rgb(185, 180, 180);
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+
+.checked-item {
+    position: relative;
+    background-color: orangered;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    border-radius: 3px;
+    /* text-decoration:line-through; */
+    display: flex;
+    flex-direction: column-reverse;
+    /* border: 1px solid rgba(146, 65, 35, 0.404); */
+}
+
+input[type="checkbox"] {
+    /* position: absolute; */
+    /* opacity: 0.01; */
+    /* top: 10px; */
+    /* z-index: 1; */
+    left: 2px;
+    /* bottom: 10px; */
+    /* width: 50px;
+    height: 50px; */
+    cursor: pointer;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+span {
+    display: none;
+}
+
+.form-check input[type="radio"] {
+    display: none;
+}
+
+.form-check input[type="radio"]:checked + label {
+    background-color: orangered;
+    color: white;
+}
+
+.form-check label + .form-check input{
+    background-color: orangered;
+    color: white;
+}
+
+.form-check label, .form-check input {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    padding: 20px 40px;
+    cursor: pointer;
+    color: #292626;
+    margin: 10px auto;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    text-transform: capitalize;
+}
+

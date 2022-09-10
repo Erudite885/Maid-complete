@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+    /* background-color:rgb(238, 238, 238); */
+    /* background-color: #ff8604; */
+    /* background-color: #ababab; ash/grey */
+    /* background-color: #373e4a; deep ash/grey */
+}
