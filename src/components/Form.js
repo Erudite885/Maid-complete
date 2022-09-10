@@ -56,7 +56,7 @@ const Form = () => {
   console.log(totalChecked);
 
   let isChecked = (item) =>
-    checked.includes(item) ? "checked-item" : "not-checked-item";
+    checked.includes(item) ? style.checkedItem : style.notCheckedItem;
 
 
   return (
@@ -116,23 +116,6 @@ const Form = () => {
             must be selected with all types of cleanings.
           </p>
           <div className={style.extrasWrapper}>
-            {/* 'comment this line' check FormFour for correct solution  */}
-            {list.map((item) => (
-              <label className={isChecked(item.name)} key={item.id}>
-                <input
-                  // onChange={handleCheck}
-                  value={item.price}
-                  name={item.name}
-                  type="checkbox"
-                ></input>
-                {item.name}
-                <BsHeart />
-              </label>
-            ))}
-            <br />
-            <br />
-            <br />
-            <br />
             {list.map((item) => (
               <label className={isChecked(item.name)} key={item.id}>
                 <input
