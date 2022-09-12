@@ -11,6 +11,7 @@ const Form = () => {
   const [dropdownbathroom, setDropdownBathroom] = useState("");
   const [checked, setChecked] = useState([]);
   const [value, setValue] = useState([]);
+  const [radioChecked, setRadioChecked] = useState("59");
 
   const list = DUMMYITEMSTHREE;
 
@@ -58,6 +59,14 @@ const Form = () => {
   let isChecked = (item) =>
     checked.includes(item) ? style.checkedItem : style.notCheckedItem;
 
+    
+  const isRadioChecked = (value) => value === radioChecked;
+  console.log(radioChecked);
+
+  const onRadioSelect = (e) => {
+    setRadioChecked(e.target.value);
+  };
+  console.log(radioChecked);
 
   return (
     <section className={style.formSection}>
@@ -94,7 +103,7 @@ const Form = () => {
             </select>
           </div>
         </div>
-        
+
         <p>
           {" "}
           You selected:{" "}
@@ -136,7 +145,7 @@ const Form = () => {
         </section>
         <hr />
 
-        {/* <section className={style.radioSection}>
+        <section className={style.radioSection}>
           <h2 className={style.radiobuttonHeading}>
             How often should we come?
           </h2>
@@ -145,31 +154,60 @@ const Form = () => {
             first cleaning.
           </p>
           <div className={style.radioInputLabelContainer}>
-            <input className={style.radioInput} type="radio"></input>
-            <label className={style.radioLabel} htmlFor="">
+            <input
+              type="radio"
+              name="radioSample"
+              id="radio1"
+              value="59"
+              checked={isRadioChecked("59")}
+              onChange={onRadioSelect}
+            ></input>
+            <label className={style.radioLabel} htmlFor="radio1">
               One Time Cleaning
             </label>
           </div>
           <div className={style.radioInputLabelContainer}>
-            <input className={style.radioInput} type="radio"></input>
-            <label className={style.radioLabel} htmlFor="">
+            <input
+              type="radio"
+              name="radioSample"
+              id="radio2"
+              value="30"
+              checked={isRadioChecked("30")}
+              onChange={onRadioSelect}
+            ></input>
+            <label className={style.radioLabel} htmlFor="radio2">
               Every Week
             </label>
           </div>
           <div className={style.radioInputLabelContainer}>
-            <input className={style.radioInput} type="radio"></input>
-            <label className={style.radioLabel} htmlFor="">
+            <input
+              type="radio"
+              name="radioSample"
+              id="radio3"
+              value="61"
+              checked={isRadioChecked("61")}
+              onChange={onRadioSelect}
+            ></input>
+            <label className={style.radioLabel} htmlFor="radio3">
               Every 2 Weeks
             </label>
           </div>
           <div className={style.radioInputLabelContainer}>
-            <input className={style.radioInput} type="radio"></input>
-            <label className={style.radioLabel} htmlFor="">
+            <input
+              type="radio"
+              name="radioSample"
+              id="radio4"
+              value="10"
+              checked={isRadioChecked("10")}
+              onChange={onRadioSelect}
+            ></input>
+            <label className={style.radioLabel} htmlFor="radio4">
               Every 4 Weeks
             </label>
           </div>
+          <p>value: ${+radioChecked} </p>
         </section>
-        <hr /> */}
+        <hr />
 
         {/* <section className={style.contactSection}>
           <h2 className={style.contactHeader}>Contact Information</h2>
