@@ -140,12 +140,12 @@ option {
     font-size: 13px;
 } */
 
-.radioSection {
+/* .radioSection {
     display: flex;
     flex-direction: column;
-}
+} */
 
-.radioInputLabelContainer{
+/* .radioInputLabelContainer{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -159,16 +159,48 @@ option {
 
 .radioInputLabelContainer:hover, .radioInputLabelContainer:active {
     background-color: #ff5405;
-}
+} */
 
-.radioInput {
+/* .radioInput {
+    display: none;
+} */
+
+/* 
+.radioLabel:hover, .radioLabel:active {
+    color: #fff;
+} */
+
+.radioInputLabelContainer input[type="radio"] {
     display: none;
 }
 
-
-.radioLabel:hover, .radioLabel:active {
-    color: #fff;
+.radioInputLabelContainer input[type="radio"]:checked + label {
+    background-color: orangered;
+    color: white;
 }
+
+.radioInputLabelContainer label + .radioInputLabelContainer input {
+    background-color: orangered;
+    color: white;
+}
+
+.radioInputLabelContainer label,
+.radioInputLabelContainer input {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    padding: 20px 40px;
+    cursor: pointer;
+    color: #292626;
+    margin: 10px auto;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    text-transform: capitalize;
+}
+
+
 
 .contactSection {
     display: flex;
