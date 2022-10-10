@@ -1,0 +1,70 @@
+.wrapper {
+    width: 100%;
+    background-color: rgb(252, 239, 183);
+    border-top: 2px solid #ccc;
+    margin: 0px auto;
+    padding: 20px 0;
+}
+
+.reservedSection {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    margin: 0 0 10px 0;
+}
+
+.reservedText {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 0;
+    padding:0;
+}
+
+.reservedCopyRightIcon {
+    background-color: black;
+    border-radius:50%;
+    margin-right: 3px;
+    width: 0.7rem;
+    height: 0.7rem;
+    fill: orangered;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+
+.footerText {
+    display: flex;
+    flex-direction: row;
+}
+
+.maidText {
+    color: orangered;
+}
+
+.icon {
+    margin-right: 10px;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    box-shadow: 2px 4px 5px orangered;
+    border-radius: 50%;
+    padding: 1px;
+    align-self: center;
+    justify-self: center;
+    color: orangered;
+}
+
+@media only screen and (min-width: 768px) {
+    span {
+        position: relative;
+        bottom: 0;
+        font-size: small;
+        }
+}

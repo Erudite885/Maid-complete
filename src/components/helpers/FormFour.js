@@ -49,10 +49,10 @@ const FormFour = () => {
           <input
             onChange={handleCheck}
             value={item.price}
-            name={item.label}
+            name={item.name}
             type="checkbox"
           ></input>
-          {item.label}
+          {item.name}
           <BsHeart />
         </label>
       ))}

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { DUMMYITEMSTHREE } from "./DUMMYITEMS";
+import { DUMMYITEMSFOUR } from "./DUMMYITEMS";
 import "./formfive.css";
 
 const FormRadio = () => {
-  const list = DUMMYITEMSTHREE;
-  console.log(list);
+  const list = DUMMYITEMSFOUR;
+  // console.log(list);
   
-  // const [checked, setChecked] = useState();
+  // const [checked, setRadioChecked] = useState();
   // console.log(checked);
 
   // const isChecked = (value) => value === checked;
@@ -14,9 +14,9 @@ const FormRadio = () => {
 
   //  const onSelect = (e) => {
   //    if(e.target.checked){
-  //      setChecked(e.target.value);
+  //      setRadioChecked(e.target.value);
   //    } else {
-  //      setChecked(e.target.name);
+  //      setRadioChecked(e.target.name);
   //    }
   // }
   // console.log(checked);
@@ -25,41 +25,50 @@ const FormRadio = () => {
 
   //  *** the one below is working for unmapped radio list ***
 
-   const [checked, setChecked] = useState("59");
+   const [radioChecked, setRadioChecked] = useState("59");
 
-  const isChecked = (value) => value === checked;
-  console.log(checked);
+  const isRadioChecked = (value) => value === radioChecked;
+  console.log(radioChecked);
 
   const onSelect = ({ target: { value } }) => {
-    setChecked(value);
+    setRadioChecked(value);
   }
-  console.log(checked);
+  console.log(radioChecked);
 
-  console.log(checked);
+ 
 
   // *** the one above is working for unmapped radio list ***
 
   return (
     <div>
-      {/* {list.map(({ id, name, value, label }) => {  */}
-      {/* //      return (
-  //        <label key={id} className={checked ? 'checked-input' : 'not-checked-item'}>
-  //          <input */}
-      {/* //          id={id}
-  //            type={name}
-  //            name={name}
-  //            value={value}
-   //           checked={isChecked({value})}
-   //           onChange={onSelect}
-   //         /> */}
-      {/* //        {label}
-      //    </label>
-      //  );
-      //})} 
+      {list.map(({ id, name, value, label }) => {  
+         return (
+           <>
+             {" "}
+             <input
+               id={id}
+               type={name}
+              //  name={name}
+               value={value}
+               checked={isRadioChecked({ value })}
+               onChange={onSelect}
+             />
+             <label
+               htmlFor={id}
+               key={id}
+               className={radioChecked ? "checked-input" : "not-checked-item"}
+             >
+               {label}
+             </label>
+           </>
+         );
+      })} 
      
-      // {/* <p>value of checked: ${checked} </p> */}
-      {/* <br /> */}
-      <br></br>
+      <p>value of checked: ${radioChecked} </p> 
+      <br />
+
+      {/*  // comment the unmapped radio below
+       <br></br>
 
       <div className="form-check">
         <input
@@ -67,7 +76,7 @@ const FormRadio = () => {
           name="radioSample"
           id="radio1"
           value="59"
-          checked={isChecked("59")}
+          checked={isRadioChecked("59")}
           onChange={onSelect}
         ></input>{" "}
         <label className="form-check-label" htmlFor="radio1">
@@ -80,7 +89,7 @@ const FormRadio = () => {
           name="radioSample"
           id="radio2"
           value="30"
-          checked={isChecked("30")}
+          checked={isRadioChecked("30")}
           onChange={onSelect}
         ></input>{" "}
         <label className="form-check-label" htmlFor="radio2">
@@ -93,7 +102,7 @@ const FormRadio = () => {
           name="radioSample"
           id="radio3"
           value="61"
-          checked={isChecked("61")}
+          checked={isRadioChecked("61")}
           onChange={onSelect}
         ></input>{" "}
         <label className="form-check-label" htmlFor="radio3">
@@ -106,7 +115,7 @@ const FormRadio = () => {
           name="radioSample"
           id="radio4"
           value="10"
-          checked={isChecked("10")}
+          checked={isRadioChecked("10")}
           onChange={onSelect}
         ></input>{" "}
         <label className="form-check-label" htmlFor="radio4">
@@ -119,16 +128,16 @@ const FormRadio = () => {
           name="radioSample"
           id="radio5"
           value="60"
-          checked={isChecked("60")}
+          checked={isRadioChecked("60")}
           onChange={onSelect}
         ></input>{" "}
         <label className="form-check-label" htmlFor="radio5">
           clean inside windows
         </label>
-      </div>
+      </div> */}
       <br />
       <br />
-      <p>value: ${+checked} </p>
+      <p>value: ${+radioChecked} </p>
     </div>
   );
 };

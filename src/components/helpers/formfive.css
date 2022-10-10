@@ -1,15 +1,15 @@
 
 
-.list-container {
+/* .list-container {
     width: 300px;
     padding: 20px;
     margin: 20px;
     display: flex;
     flex-flow: row wrap;
-    /* background-color: red; */
-}
+    /* background-color: red; 
+} */
 
-.checkInput {
+/* .checkInput {
     padding: 20px;
     margin: 10px;
     background-color: rgb(247, 220, 220);
@@ -17,7 +17,7 @@
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-}
+} */
 
 .not-checked-item {
     padding: 20px;
@@ -29,8 +29,6 @@
     flex-direction: column-reverse;
 }
 
-
-
 .checked-item {
     position: relative;
     background-color: orangered;
@@ -38,10 +36,8 @@
     margin: 10px;
     color: white;
     border-radius: 3px;
-    /* text-decoration:line-through; */
     display: flex;
     flex-direction: column-reverse;
-    /* border: 1px solid rgba(146, 65, 35, 0.404); */
 }
 
 input[type="checkbox"] {
@@ -49,13 +45,13 @@ input[type="checkbox"] {
     /* opacity: 0.01; */
     /* top: 10px; */
     /* z-index: 1; */
-    left: 2px;
     /* bottom: 10px; */
     /* width: 50px;
     height: 50px; */
-    cursor: pointer;
     /* display: none; */
     /* visibility: hidden; */
+    cursor: pointer;
+    left: 2px;
 }
 
 span {

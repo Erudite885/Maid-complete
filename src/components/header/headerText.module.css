@@ -1,0 +1,30 @@
+.container {
+    padding:20px 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.container h2 {
+    text-transform: uppercase;
+    font-weight:600;
+    font-size: 1.5rem;
+}
+
+.container p {
+    margin-top: 20px;
+}
+
+.container h2 span {
+    color: orangered;
+}
+
+@media only screen and (min-width: 768px) {
+.container h2 span {
+    position: relative;
+    bottom: 0;
+    font-size: 24px;
+}
+}

@@ -100,7 +100,12 @@ export const DUMMY_DATA = [
         show: true,
         ordering: 14,
       },
-      { id: 101, code: "booking_tip", label: "TIP", show: false, ordering: 15 },
+      { id: 101, 
+        code: "booking_tip", 
+      label: "TIP", 
+      show: false, 
+      ordering: 15 
+    },
       {
         id: 102,
         code: "booking_discount",
